@@ -58,9 +58,11 @@ func authorizeEmail(w http.ResponseWriter, r *http.Request) {
 
 		if message != "berhasil" {
 			data2 := map[string]interface{}{
-				"error": "Email tidak ada",
+				"error":  "Email tidak ada",
+				"error2": "-",
+				"error3": "-",
 			}
-			tmp, _ := template.ParseFiles("non.html")
+			tmp, _ := template.ParseFiles("submit.html")
 			tmp.Execute(w, data2)
 		}
 	}
