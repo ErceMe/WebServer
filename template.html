@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Challenge 5</title>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            border: none;
+            text-decoration: none;
+        }
+
+        .container{
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container-avail{
+            height: 250px;
+            width: 300px;
+            color: #5b7673;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        form{
+            background-color: #5b7673;
+            display: flex;
+            height: 250px;
+            width: 300px;
+            flex-direction: column;
+            margin: 20px;
+            padding: 20px;
+            gap: 10px;
+            border-radius: 50px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        input{
+            width: 250px;
+            height: 40px;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #e1ebe9;
+        }
+
+        ::placeholder{
+            color: #5b7673;
+        }
+
+        button{
+            padding: 10px 20px;
+            border-radius: 50;
+            width: 250px;
+            height: 40px;
+            cursor: pointer;
+            color: white;
+            background-color: #42c43e;
+            border-radius: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="/process" method="POST">
+            <h2>LOGIN FORM</h2> 
+            <input type="email" name="email" placeholder="Email Address" required> 
+            <input type="password" name="password" placeholder="Password">
+            <button type="submit">Submit</button>
+        </form>
+        <div class="container-avail"> 
+            <h3>List of Available Emails :</h3>
+            <ul> {{range .}}
+                <li>{{.Email}}</li>
+            </ul> {{end}}
+        </div>
+    </div>
+</body>
+</html>

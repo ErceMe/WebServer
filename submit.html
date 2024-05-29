@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Challenge 5</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            border: none;
+            color: white;
+            text-decoration: none;
+        }
+
+        div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        table, th, td {
+          padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <table style="background-color: #5b7673; margin: 50px;border-radius: 30px;">
+        <tr>
+            <th>Email</th>
+            <td>:</td>
+            <td>{{.Email}}</td>
+        </tr>
+        <tr>
+            <th>Address</th>
+            <td>:</td>
+            <td>{{.Address}}</td>
+        </tr>
+        <tr>
+            <th>Mood</th>
+            <td>:</td>
+            <td>{{.Mood}}</td>
+        </tr>
+    </table>
+    <h4><a style="background-color: #e01e1e; color:white; padding: 10px 20px;border-radius: 10px;" href="/index" role="button">Logout</a></h4>
+    </div>
+</body>
+</html>
